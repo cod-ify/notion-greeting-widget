@@ -23,7 +23,7 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: background 0.3s, color 0.3s;
-    border: 2px solid #fff; /* Add white border */
+    border: 2px solid #fff; /* White border */
 }
 
 .card:hover {
@@ -33,14 +33,17 @@ body {
 
 .clock, .date, .greet {
     display: block;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 2em;
     margin: 10px 0;
 }
 
 .greet {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
     font-size: 2.5rem;
+}
+
+.date, .clock {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
 }
 
 .time, .colon {
