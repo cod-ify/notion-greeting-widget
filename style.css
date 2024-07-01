@@ -46,6 +46,10 @@ body {
     font-size: 2em;
 }
 
+.date {
+    white-space: pre-wrap; /* Ensures the <br> tag in the JavaScript works correctly */
+}
+
 .time, .colon {
     display: inline-block;
 }
