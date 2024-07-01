@@ -12,23 +12,31 @@ function clock() {
     var today = new Date();
     var hour = zeros(twelveHour(today.getHours()));
     var minutes = zeros(today.getMinutes());
-    var seconds = zeros(today.getSeconds());
-    if (today.getHours() >= 12) {
-        seconds += " PM";
-    } else {
-        seconds += " AM";
-    }
+    var period = today.getHours() >= 12 ? ' PM' : ' AM';
     hrs = today.getHours();
+    var greet;
     if (hrs < 12)
         greet = 'Good Morning';
     else if (hrs >= 12 && hrs <= 17)
         greet = 'Good Afternoon';
     else if (hrs >= 17 && hrs <= 24)
         greet = 'Good Evening';
+
+    // Get the user's name from local storage
+    var name = localStorage.getItem('userName');
+    if (!name) {
+        name = prompt("Please enter your name:");
+        if (name) {
+            localStorage.setItem('userName', name);
+        }
+    }
+    if (name) {
+        greet += `, ${name}`;
+    }
+
     document.getElementById('greet').innerHTML = greet;
     document.getElementById('hour').innerHTML = hour;
-    document.getElementById('min').innerHTML = minutes;
-    document.getElementById('sec').innerHTML = seconds;
+    document.getElementById('min').innerHTML = minutes + period;
 }
 
 function twelveHour(hour) {
