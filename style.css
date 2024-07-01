@@ -37,7 +37,7 @@ body {
 }
 
 .greet {
-    font-family: 'Macondo', 'Playfair Display', cursive;
+    font-family: 'Macondo', 'Playfair Display', sans-serif;
     font-size: 2.5rem;
 }
 
@@ -56,8 +56,4 @@ body {
 
 .time {
     min-width: 37px;
-}
-
-.colon {
-    font-size: 1.1em;
 }
